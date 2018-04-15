@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <title>Biblioteka</title>
+        <script type="text/javascript">
+            //Validate of add coments
+            function toadd() {
+                var r = /^\w+@\w+\.\w{2,4}$/i;
+                var tel = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,12}(\s*)?$/;
+                if (!r.test(document.forms["recall"].elements["emil"].value)) {
+                    alert("Не коректно введено email");
+                }
+                else if (!tel.test(document.forms["recall"].elements["telephone"].value)) {
+                    alert("Не коректно введено номер телефона");
+                }
+
+                else {
+                    var nim = document.forms["recall"].elements["names"].value;
+                    var com = document.forms["recall"].elements["comment"].value;
+                    var clq = document.createElement('div');
+                    clq.id = "mine";
+                    clq.className = "alert alert-success";
+                    clq.innerHTML = "<strong>" + nim + ":</strong>" + com;
+                    document.body.insertBefore(clq, document.body.lastElementChild);
+
+                    document.forms["recall"].elements["names"].value = "";
+                    document.forms["recall"].elements["emil"].value = "";
+                    document.forms["recall"].elements["comment"].value = "";
+                }
+            }
+        //delete coments
+        function dilite() {
+            var list = document.getElementById("mine");
+            list.remove();
+        }
+
+        function changeWhite() {
+            document.getElementsByTagName("link")[0].href="CSS/Default_Style.css";
+        }
+            function changeBrown() {
+                document.getElementsByTagName("link")[0].href="CSS/Brown_Style.css";
+            }
+
+        </script>
+        <link href="CSS/Default_Style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class = "title"><h1>Бібліотека</h1></div>
+
+            <ul class = "menu_left">
+                <a style="font-family: Arial Blac; color: #000;"><b>&emsp; &emsp; ТЕМА</b><br></a>
+                <input type="button" id="whitebuton" value="Світла" onclick="changeWhite()">
+                <input type="button" id="blacbuton" value="Темна" onclick="changeBrown()">
+
+            </ul>
+            <ul class = "menu_right">
+                <a href = "findBooks.html" target="_blank" class="c" >ПОШУК</a>
+                <a href = "diagrams.html" target="_blank" class="c" >СТАТИСТИКА</a>
+
+            </ul>
+        </header>
+
+        <h1 align="left" style="font-family: 'Monotype Corsiva';color: #ff2000;font-size: 32pt;">Учітесь, читайте, І чужому научайтесь</h1>
+        <figure class="leftimg">
+            <img src="img/nulp_bib.jpg" alt="Наукова бібліотека НУ ЛП" width="430" height="380" class="leftimg">
+            <figcaption style="color: red; font-family: 'Segoe UI Semibold';">Наукова бібліотека університету "Львівська політехніка"</figcaption>
+        </figure>
+        <h2 align="center" style="color: cornflowerblue">Передісторія</h2>
+        <p id="abz1">Першою відомою бібліотекою можна вважати храм в Ніппурі. У храмовій школі, т. зв. е-дубі («будинок табличок»),
+            була знайдена Ніппурська бібліотека: понад 30 000 табличок з адміністративними, юридичними, медичними, літературними
+            та історичними текстами, багато з яких досі не опубліковані.
+            Бібліотеки були відомі ще в стародавньому світі (Ассирія, Єгипет, Китай). Найдавніша з них — клинописна Бібліотека
+            Ашшурбаніпала в Ассирії (VII ст. до н. е.), а найбільша — Александрійська бібліотека, в якій були зібрані рукописні книги
+            античного світу (III ст. до н. е.); вона була частиною комплексу mouseĩon (музей). До комплексу входили житлові кімнати,
+            столові приміщення, приміщення для читання, ботанічний і зоологічний сади, обсерваторія і бібліотека. Пізніше до нього
+            були додані медичні та астрономічні інструменти, опудала тварин, статуї й погруддя, які були використані для навчання.
+            У mouseĩon входило 200 000 папірусів в Храмі (майже всі бібліотеки античності були при храмах) і 700 000 документів в Школі.
+            Музей і велика частина Олександрійської бібліотеки були знищені приблизно в 270 році нашої ери. Іншою визначною бібліотекою
+            античності була Пергамська бібліотека. У Стародавній Греції перша публічна бібліотека була заснована в Гераклії тираном
+            Клеарх (IV століття до н. е.) Клеарх (учень Платона) Відомості про бібліотеки у Хорезмі належать до III ст.</p>
+    <h2 align="center" style="color: green;font-size: 20pt">Про бібліотеку</h2>
+    <p>Науко́во-техні́чна бібліот́ека Націона́льного університе́ту «Льві́вська політе́хніка» — одна з найбільших книгозбірень вищих навчальних закладів України.
+        Книжково-журнальний фонд бібліотеки нараховує близько 1 млн. 800 тис. примірників, більшість становить фонд наукової літератури. Перший постійний
+        бібліотечний працівник з'явився наприкінці 1874 року. Фонди поділяються на сім структурних груп:</p>
+        <ul id="list">
+            <li>Фонд відділу україніки</li>
+            <li>Фонд рукописних, стародрукованих та рідкісних видань</li>
+            <li>Фонд навчальної літератури</li>
+            <li>Резервно-обмінний фонд</li>
+        </ul>
+       <p id ="abz3"> У бібліотеці зберігаються численні унікальні видання й манускрипти. Зокрема у фондах бібліотеки є книжки з особистої бібліотеки французького
+        кардинала Мазаріні, французького короля Людовіка XV, польського короля Сигизмунда ІІ, гетьмана Івана Мазепи.</p>
+        <h2 align="center" style="color: #f0d513;font-size: 20pt">Новини</h2>
+    <p>Щоб переглянути всі новини натисніть <a href="http://library.lnu.edu.ua/bibl/" target="_blank">тут.</a> Якщо ви хочете завітати до
+        нашої бібліотеки, ознайомтесь із <a href=rozklad.html>графіком роботи</a>.</p>
+        <h2 align="left" style="color: #ffa223;font-size: 20pt">Зворотній зв'язок</h2>
+
+        <form name="recall" id="form_first">
+            <p style="color: #40c300;"><b>Ваше ім'я:</b><br>
+                <input name="names" type="text" size="40" required>
+            </p>
+            <p style="color: #40c300;"><b>Email:</b><br>
+                <input name="emil" type="email" size="30">
+            </p>
+            <p style="color: #40c300;"><b>Номер телефона:</b><br>
+                <input id="telephone" name="numbering" type="tel" size="25">
+            </p>
+            <p style="color: #40c300;" 1><b>Коментарій</b><Br>
+                <textarea name="comment" cols="40" rows="3"></textarea></p>
+            <p><input type="button" value="OK" onclick="toadd()">
+                <input type="button" value="Видалити" onclick="dilite()"></p>
+        </form>
+
+        <p style="font-family: 'Monotype Corsiva';color: #626260; font-size: 25px;">З повагою адміністрація сайту.</p>
+
+        <h2 align="left" style="color: #ff1c7e;font-size: 20pt">Коментарі</h2>
+    <p align="right" style="color: #ff2000;">(с)Alex Halk inc., Всі права захищено, 2018 р.</p>
+    </body>
+
+</html>

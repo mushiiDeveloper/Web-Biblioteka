@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Пошук</title>
+    <style>
+        .block2 {
+            width: 450px;;
+            padding: 5px;
+            border: solid 3px #5a6cc1;
+            position: relative;
+            top: 50%;
+            left: 34%;
+            border-radius: 10px;
+            text-align: center;
+            background: #3a7ead;
+        }
+        .leftimg {
+            float:left; /* Выравнивание по левому краю */
+        }
+
+        /*...animation*/
+        #train {
+             position: relative;
+             cursor: pointer;
+         }
+
+    </style>
+
+</head>
+<body>
+<h1 align="center" style="color:#ef4117; font-family: 'Monotype Corsiva'; font-size: 40px ">Знайти книгу</h1>
+<div class="block2">
+<form action="" method="get" id="form1">
+    <p style="color: #e6711f;"><b style="font-size: 20px">Автор:</b>
+        <input name="author" type="text" size="25" required >
+    </p>
+
+    <p style="color: #e6711f;"><b style="font-size: 20px">Тип книги:</b></p>
+    <input name="typebook" type="radio" value="1" >Художня
+    <input name="typebook" type="radio" value="2">Не художня
+    <input name="typebook" type="radio" value="3" checked>Невідомо
+
+    <p style="color: #e6711f;"><b style="font-size: 20px">Додаткова інформація:</b></p>
+    <textarea name="comment" cols="40" rows="4"></textarea></p>
+
+    <b style="color: #e6711f;font-size: 20px">Жанр:</b>
+    <select>
+        <option name="janr" value="Roman">Роман</option>
+        <option name="janr" value="Novela">Новела</option>
+        <option name="janr" value="Comedy">Комедія</option>
+        <option name="janr" value="Drame">Драма</option>
+        <option name="janr" value="Eligiya">Елегія</option>
+        <option name="janr" selected value="Other">Інший</option>
+    </select>
+
+    <p><input type="submit" value="Пошук">
+        <input type="button" value="Закрити" onclick="window.close()"></p>
+
+    <input type="hidden" name="brouser" value="ver.33.25.1">
+</form>
+</div>
+<img src="img/ones.jpg" id="train" alt="Search" width="320" height="200" class="leftimg">
+<script>
+    train.onmouseover = function() {
+        animate(function(timePassed) {
+            train.style.left = timePassed / 5 + 'px';
+        }, 4000);
+    };
+
+    // Рисует функция draw
+    // Продолжительность анимации duration
+    function animate(draw, duration) {
+        var start = performance.now();
+
+        requestAnimationFrame(function animate(time) {
+            // определить, сколько прошло времени с начала анимации
+            var timePassed = time - start;
+
+            console.log(time, start)
+            // возможно небольшое превышение времени, в этом случае зафиксировать конец
+            if (timePassed > duration) timePassed = duration;
+
+            // нарисовать состояние анимации в момент timePassed
+            draw(timePassed);
+
+            // если время анимации не закончилось - запланировать ещё кадр
+            if (timePassed < duration) {
+                requestAnimationFrame(animate);
+            }
+
+        });
+    }
+</script>
+
+</body>
+</html>
