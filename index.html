@@ -1,7 +1,11 @@
 <!doctype html>
-<html lang="">
+<html lang="ua">
     <head>
-        <meta charset="utf-8">
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
         <title>-Biblioteka-</title>
         <script type="text/javascript">
             //Validate of add coments
@@ -43,29 +47,37 @@
             }
 
         </script>
+
         <link href="CSS/Default_Style.css" rel="stylesheet">
     </head>
     <body>
-        <header>
-            <div class = "title"><h1>Бібліотека</h1></div>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark " >
+            <!-- Brand -->
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="Logo" style="width:65px;">
+            </a>
 
-            <ul class = "menu_left">
-                <a style="font-family: Arial Blac; color: #000;"><b>&emsp; &emsp; ТЕМА</b><br></a>
-                <input type="button" id="whitebuton" value="Світла" onclick="changeWhite()">
-                <input type="button" id="blacbuton" value="Темна" onclick="changeBrown()">
+            <!-- Links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="All_books_botstrap.html">Книги</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="findBooks.html">Пошук</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="diagrams.html">Статистика</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Про нас</a>
+                </li>
 
             </ul>
-            <ul class = "menu_right">
-                <a href = "All_books_botstrap.html" target="_blank" class="c" >КНИГИ</a>
-                <a href = "findBooks.html" target="_blank" class="c" >ПОШУК</a>
-                <a href = "diagrams.html" target="_blank" class="c" >СТАТИСТИКА</a>
-
-            </ul>
-        </header>
-
+        </nav>
+        <div class="container">
         <h1 align="left" style="font-family: 'Monotype Corsiva';color: #ff2000;font-size: 32pt;">Учітесь, читайте, І чужому научайтесь</h1>
         <figure class="leftimg">
-            <img src="img/nulp_bib.jpg" alt="Наукова бібліотека НУ ЛП" width="430" height="380" class="leftimg">
+            <img src="img/nulp_bib.jpg" alt="Наукова бібліотека НУ ЛП" width="400" height="380" class="leftimg">
             <figcaption style="color: red; font-family: 'Segoe UI Semibold';">Наукова бібліотека університету "Львівська політехніка"</figcaption>
         </figure>
         <h2 align="center" style="color: cornflowerblue">Передісторія</h2>
@@ -77,7 +89,7 @@
             античного світу (III ст. до н. е.); вона була частиною комплексу mouseĩon (музей). До комплексу входили житлові кімнати,
             столові приміщення, приміщення для читання, ботанічний і зоологічний сади, обсерваторія і бібліотека. Пізніше до нього
             були додані медичні та астрономічні інструменти, опудала тварин, статуї й погруддя, які були використані для навчання.
-            У mouseĩon входило 200 000 папірусів в Храмі (майже всі бібліотеки античності були при храмах) і 700 000 документів в Школі.
+            У музей входило 200 000 папірусів в Храмі (майже всі бібліотеки античності були при храмах) і 700 000 документів в Школі.
             Музей і велика частина Олександрійської бібліотеки були знищені приблизно в 270 році нашої ери. Іншою визначною бібліотекою
             античності була Пергамська бібліотека. У Стародавній Греції перша публічна бібліотека була заснована в Гераклії тираном
             Клеарх (IV століття до н. е.) Клеарх (учень Платона) Відомості про бібліотеки у Хорезмі належать до III ст.</p>
@@ -118,6 +130,7 @@
 
         <h2 align="left" style="color: #ff1c7e;font-size: 20pt">Коментарі</h2>
     <p align="right" style="color: #ff2000;">(с)Alex Halk inc., Всі права захищено, 2018 р.</p>
+            </div>
     </body>
 
 </html>
