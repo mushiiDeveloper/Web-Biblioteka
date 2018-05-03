@@ -45,7 +45,7 @@
             <a class="nav-link" href="All_books_botstrap.html">Книги</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="findBooks.html">Пошук</a>
+            <a class="nav-link" href="information_of_books.html">Пошук</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="diagrams.html">Статистика</a>
@@ -58,25 +58,22 @@
 <h1></h1>
 <div class="block2">
 <form action="" method="get" id="form1">
-    <p style="color: #e6711f;"><b style="font-size: 20px">Автор:</b>
+    <p style="color: #e6711f;"><b style="font-size: 20px">Найменування:</b>
         <input name="author" type="text" size="25" required >
     </p>
 
-    <p style="color: #e6711f;"><b style="font-size: 20px">Тип книги:</b></p>
-    <input name="typebook" type="radio" value="1" >Художня
-    <input name="typebook" type="radio" value="2">Не художня
-    <input name="typebook" type="radio" value="3" checked>Невідомо
+    <b style="color: #e6711f;font-size: 20px; align-items: left">Рік:</b>
+    <p><input maxlength="7" size="40"></p>
 
-    <p style="color: #e6711f;"><b style="font-size: 20px">Додаткова інформація:</b></p>
-    <textarea name="comment" cols="40" rows="4"></textarea></p>
 
-    <b style="color: #e6711f;font-size: 20px">Жанр:</b>
+    <b style="color: #e6711f;font-size: 20px; align-items: left">Жанр:</b>
     <select>
-        <option name="janr" value="Roman">Роман</option>
-        <option name="janr" value="Novela">Новела</option>
+        <option name="janr" value="Roman">Комп'ютери та IT</option>
+        <option name="janr" value="Novela">Роман</option>
         <option name="janr" value="Comedy">Комедія</option>
         <option name="janr" value="Drame">Драма</option>
-        <option name="janr" value="Eligiya">Елегія</option>
+        <option name="janr" value="Eligiya">Пригоди</option>
+        <option name="janr" value="Eligiya">Фентезі</option>
         <option name="janr" selected value="Other">Інший</option>
     </select>
 
