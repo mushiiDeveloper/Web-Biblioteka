@@ -30,7 +30,6 @@
          }
 
     </style>
-
 </head>
 <body>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark " >
@@ -57,23 +56,24 @@
 </nav>
 <h1></h1>
 <div class="block2">
-<form action="" method="get" id="form1">
+<form action="ResultOfInformation.php" method="get">
     <p style="color: #e6711f;"><b style="font-size: 20px">Найменування:</b>
-        <input name="author" type="text" size="25" required >
+        <input name="name_book" type="text" size="25" required >
     </p>
 
+    <p>
     <b style="color: #e6711f;font-size: 20px; align-items: left">Рік:</b>
-    <p><input maxlength="7" size="40"></p>
+    <input name="year" maxlength="4" size="4"></p>
 
 
     <b style="color: #e6711f;font-size: 20px; align-items: left">Жанр:</b>
-    <select>
-        <option name="janr" value="Roman">Комп'ютери та IT</option>
-        <option name="janr" value="Novela">Роман</option>
+    <select name="janr">
+        <option name="janr" value="IT">Комп'ютери та IT</option>
+        <option name="janr" value="Roman">Роман</option>
         <option name="janr" value="Comedy">Комедія</option>
         <option name="janr" value="Drame">Драма</option>
         <option name="janr" value="Eligiya">Пригоди</option>
-        <option name="janr" value="Eligiya">Фентезі</option>
+        <option name="janr" value="Fantasy">Фентезі</option>
         <option name="janr" selected value="Other">Інший</option>
     </select>
 
