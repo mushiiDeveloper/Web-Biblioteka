@@ -6,23 +6,9 @@
  * Time: 18:28
  */
 //Print the navbar for all pages
-echo "<html lang=\"ua\">
-<head>
-    <title>Information</title>
-    <meta charset=\"UTF-8\" name=\"viewport\" content=\"width=device-width, initial-scale=1\">
-    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css\">
-    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>
-    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js\"></script>
-    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js\"></script>
-    <style>
-    p
-    {
-    text-indent: 4em;
-    }
-</style>
-</head>
-<body>
-<nav class=\"navbar navbar-expand-sm bg-dark navbar-dark \" >
+//
+//If book if not found
+echo "<nav class=\"navbar navbar-expand-sm bg-dark navbar-dark \" >
     <!-- Brand -->
     <a class=\"navbar-brand\" href=\"index.html\">
         <img src=\"img/logo.png\" alt=\"Logo\" style=\"width:65px;\">
@@ -31,7 +17,7 @@ echo "<html lang=\"ua\">
     <!-- Links -->
     <ul class=\"navbar-nav\">
         <li class=\"nav-item\">
-            <a class=\"nav-link\" href=\"All_books_botstrap.html\">Книги</a>
+            <a class=\"nav-link\" href=\"All_books_botstrap.php\">Книги</a>
         </li>
         <li class=\"nav-item\">
             <a class=\"nav-link\" href=\"information_of_books.html\">Пошук</a>
@@ -40,13 +26,14 @@ echo "<html lang=\"ua\">
             <a class=\"nav-link\" href=\"diagrams.html\">Статистика</a>
         </li>
         <li class=\"nav-item\">
+            <a class=\"nav-link\" href=\"AddNewBooks.php\">Додати</a>
+        </li>
+        <li class=\"nav-item\">
             <a class=\"nav-link\" href=\"index.html\">Про нас</a>
         </li>
+
     </ul>
-</nav>
-</body>";
-//
-//If book if not found
+</nav>";
 $names=$_GET["name_book"];
 if($names!="Рефакторинг" and $names!="Колгосп тварин" and $names!="Гаррі Поттер та Дари смерті")
     echo "
